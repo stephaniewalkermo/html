@@ -1,0 +1,284 @@
+/* General Body and Typography */
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins';
+    color: #222;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px; /* Add some padding at the bottom */
+}
+
+.navbar {
+    padding: 20px 80px;
+}
+
+.logo {
+    position: absolute;
+    width: 27.83px;
+    height: 18.56px;
+    left: 42.62px;
+    top: 20.97px;
+
+    font-family: 'Limelight';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.0411px;
+    line-height: 15px;
+    color: #FFBB00;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 50px;
+    padding: 0 80px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 400px; /* Minimum width for text block */
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: #222;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn {
+    background-color: #FFB800; /* Orange color */
+    color: #fff;
+    border: none;
+}
+
+.menu-btn:hover {
+    background-color: #d35400;
+}
+
+.order-btn {
+    background-color: #FFB800; /* A darker orange */
+    color: #fff;
+    border: none;
+}
+
+.order-btn:hover {
+    background-color: #d35400;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 450px; /* Minimum width for image block */
+    height: 600px; /* Fixed height for the image container */
+    background-image: url('hero_pizza.png'); /* Placeholder image for the hero section */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px; /* Slightly rounded corners for the image */
+}
+
+/* Special Dishes Section */
+.special-dishes {
+    background-color: #ffc107; /* Orange background for this section */
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.special-dishes h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.dish-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.dish-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-10px);
+}
+
+.dish-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.dish-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dish-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows paragraphs to take available space */
+}
+
+.dish-card .price {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #e67e22; /* Darker orange for price */
+    margin-bottom: 20px;
+}
+
+.order-now-small {
+    background-color: #e67e22; /* Darker orange for small buttons */
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.order-now-small:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar, .hero-content, .special-dishes {
+        padding: 20px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-image {
+        height: 500px;
+        min-width: unset; /* Remove min-width to allow shrinking */
+    }
+
+    .dish-card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar, .hero-content, .special-dishes {
+        padding: 15px 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .special-dishes h2 {
+        font-size: 2em;
+    }
+
+    .dish-card {
+        width: 80%; /* Make cards wider on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3em;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .special-dishes h2 {
+        font-size: 1.8em;
+    }
+
+    .dish-card {
+        width: 95%;
+    }
+}
