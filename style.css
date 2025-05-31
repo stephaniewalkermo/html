@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-    background-color: #f8f8f8;
+    background-color: #FFFFFF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,25 @@ h1, h2, h3 {
     font-size: 18.0411px;
     line-height: 15px;
     color: #FFBB00;
+}
+
+.restaurante {
+    position: absolute;
+    width: 85.57px;
+    height: 12.37px;
+    left: 68.9px;
+    top: 27.15px;
+
+    font-family: 'Mina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.371px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.17em;
+
+    color: #000000;
 }
 
 .hero-content {
@@ -108,7 +127,7 @@ h1, h2, h3 {
     flex: 1;
     min-width: 450px; /* Minimum width for image block */
     height: 600px; /* Fixed height for the image container */
-    background-image: url('hero_pizza.png'); /* Placeholder image for the hero section */
+    background-image: url('images/image-1.png'); /* Placeholder image for the hero section */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
