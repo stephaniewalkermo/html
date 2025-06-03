@@ -352,11 +352,10 @@ h1, h2, h3 {
 
 .customer-photo {
     width: 120px;
-    height: 120px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #e67e22; /* Border around photo */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -386,31 +385,34 @@ h1, h2, h3 {
 .welcome-section {
     background-color: #fff;
     padding: 80px; /* Ample padding around the section */
+    height: 900px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .welcome-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px; /* Max width for content alignment */
-    width: 100%;
+    align-items: left;
+    width: 800px;
+    height: 400px;
     gap: 50px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .welcome-text {
     flex: 1;
-    min-width: 400px; /* Minimum width for the text block */
-    max-width: 600px; /* Limit max width for readability */
+    margin-top: 150px;
+    width: 100px;
+    height: auto;
+    left: 0;
 }
 
 .welcome-text h1 {
-    font-size: 3.2em;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 10px;
+    width: 800px;
 }
 
 .welcome-text .highlight {
@@ -423,36 +425,19 @@ h1, h2, h3 {
     color: #666;
 }
 
-.welcome-images {
-    flex: 1;
-    min-width: 400px; /* Minimum width for the image block */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px; /* Fixed height for the container to position images */
-}
-
 .pasta-image {
-    width: 60%; /* Adjust size as needed */
+    width: 800px; /* Adjust size as needed */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2; /* Pasta image on top */
+    margin-top: 20px;
+    margin-left: 100px;
 }
 
 .spices-image {
-    width: 70%; /* Adjust size as needed */
+    width: 1000px; /* Adjust size as needed */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1; /* Spices image behind */
+    margin-left: 0px;
 }
 
 
