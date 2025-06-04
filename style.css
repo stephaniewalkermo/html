@@ -15,10 +15,12 @@ h1, h2, h3 {
 /* Hero Section */
 .hero-section {
     background-color: #FFFFFF;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-bottom: 50px; /* Add some padding at the bottom */
+    flex-wrap: nowrap;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -46,7 +48,6 @@ h1, h2, h3 {
     height: 12.37px;
     left: 68.9px;
     top: 27.15px;
-
     font-family: 'Mina';
     font-style: normal;
     font-weight: 400;
@@ -64,15 +65,22 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    gap: 50px;
-    padding: 0 80px;
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    /* gap: 50px; */
+    padding: 10px 0px 30px 40px;
+    flex-wrap: nowrap; /* Allow content to wrap on smaller screens */
+    flex-direction: row;
 }
 
 .hero-text {
     flex: 1;
     min-width: 400px; /* Minimum width for text block */
     max-width: 600px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 13.4px;
+    line-height: 171%;
+    letter-spacing: 0%;
+
 }
 
 .hero-text h1 {
@@ -97,7 +105,7 @@ h1, h2, h3 {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
@@ -105,8 +113,10 @@ h1, h2, h3 {
 
 .menu-btn {
     background-color: #FFB800; /* Orange color */
-    color: #fff;
+    color: #000;
     border: none;
+    box-shadow: 0px 2.06px 2.06px 0px #00000040;
+
 }
 
 .menu-btn:hover {
@@ -115,8 +125,9 @@ h1, h2, h3 {
 
 .order-btn {
     background-color: #FFB800; /* A darker orange */
-    color: #fff;
+    color: #000;
     border: none;
+    box-shadow: 0px 2.06px 2.06px 0px #00000040; 
 }
 
 .order-btn:hover {
@@ -128,7 +139,7 @@ h1, h2, h3 {
     min-width: 450px; /* Minimum width for image block */
     height: 600px; /* Fixed height for the image container */
     background-image: url('images/image-1.png'); /* Placeholder image for the hero section */
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px; /* Slightly rounded corners for the image */
@@ -136,13 +147,15 @@ h1, h2, h3 {
 
 /* Special Dishes Section */
 .special-dishes {
-    background-color: #ffc107; /* Orange background for this section */
+    background-color: #FFAE00; /* Orange background for this section */
     padding: 60px 80px;
     text-align: center;
+    min-height: 100vh;
+
 }
 
 .special-dishes h2 {
-    color: #fff;
+    color: #000;
     font-size: 2.5em;
     margin-bottom: 50px;
 }
@@ -152,10 +165,13 @@ h1, h2, h3 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
 }
 
 .dish-card {
-    background-color: #FFB800;
+    background-color: #FFAE00;
     border-radius: 10px;
     padding: 25px;
     width: 280px;
@@ -187,16 +203,24 @@ h1, h2, h3 {
 
 .dish-card p {
     font-size: 0.95em;
-    color: #666;
+    color: #000;
     margin-bottom: 15px;
     flex-grow: 1; /* Allows paragraphs to take available space */
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 10.3px;
+    line-height: 13.39px;
+    letter-spacing: 0%;
+
 }
 
 .dish-card .price {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #e67e22; /* Darker orange for price */
-    margin-bottom: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 10.3px;
+    line-height: 18.53px;
+    letter-spacing: 0%;
+
 }
 
 .order-now-small {
@@ -204,7 +228,7 @@ h1, h2, h3 {
     color: #fff;
     padding: 10px 25px;
     font-size: 0.9em;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -215,8 +239,17 @@ h1, h2, h3 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .navbar, .hero-content, .special-dishes {
-        padding: 20px 40px;
+
+    .hero-section {
+        padding-top: 10px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        min-height: 100vh;
+    }
+
+    .special-dishes {
+        padding: 10px 20px;
     }
 
     .hero-text h1 {
@@ -234,13 +267,14 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
-    .navbar, .hero-content, .special-dishes {
+    .navbar, .special-dishes {
         padding: 15px 20px;
     }
 
     .hero-content {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
+        padding: 15px 0px 15px 20px;
     }
 
     .hero-text {
@@ -307,6 +341,7 @@ h1, h2, h3 {
     background-color: #f8f8f8; /* Light grey background */
     padding: 60px 80px;
     text-align: center;
+    min-height: 100vh;
 }
 
 .testimonials-header {
@@ -329,7 +364,7 @@ h1, h2, h3 {
 .testimonial-cards-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 30px;
 }
 
@@ -352,11 +387,12 @@ h1, h2, h3 {
 
 .customer-photo {
     width: 120px;
-    height: 150px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /*border: 3px solid #e67e22;  Border around photo */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .stars {
@@ -384,60 +420,101 @@ h1, h2, h3 {
 /* Welcome Section */
 .welcome-section {
     background-color: #fff;
-    padding: 80px; /* Ample padding around the section */
-    height: 900px;
+    padding: 10px 0px 20px 30px; /* Ample padding around the section */
     display: flex;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
 .welcome-content {
     display: flex;
     justify-content: space-between;
-    align-items: left;
-    width: 800px;
-    height: 400px;
-    gap: 50px;
+    /* align-items: center; */
+    max-width: 1200px; /* Max width for content alignment */
+    width: 100%;
+    gap: 0px;
+    flex-wrap: nowrap; /* Allow wrapping on smaller screens */
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .welcome-text {
     flex: 1;
-    margin-top: 150px;
-    width: 100px;
-    height: auto;
-    left: 0;
+    min-width: 400px; /* Minimum width for the text block */
+    max-width: 600px; /* Limit max width for readability */
 }
 
 .welcome-text h1 {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 60px;
-    margin-bottom: 10px;
-    width: 800px;
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 29.52px;
+    line-height: 31.98px;
+    letter-spacing: 0%;
+
 }
 
 .welcome-text .highlight {
-    color: #e67e22; /* Highlight color for JV Restaurant */
+    color: #FFBB00; /* Highlight color for JV Restaurant */
 }
 
 .welcome-text p {
-    font-size: 1.1em;
     line-height: 1.6;
     color: #666;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 12.79px;
+    line-height: 23.62px;
+    letter-spacing: 0%;
+
+}
+
+.text-and-spices {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 400px;
+    gap: 30px;
+    
+}
+
+.welcome-images {
+    flex: 1;
+    min-width: 400px; /* Minimum width for the image block */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 450px; /* Fixed height for the container to position images */
 }
 
 .pasta-image {
-    width: 800px; /* Adjust size as needed */
+    width: 150%; /* Adjust size as needed */
+    max-width: 400px;
     height: auto;
+    border-radius: 8px;
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
     position: absolute;
-    margin-top: 20px;
-    margin-left: 100px;
+    top: -20px;
+    right: 0px;
+    z-index: 2; /* Pasta image on top */
 }
 
 .spices-image {
-    width: 1000px; /* Adjust size as needed */
+    width: 70%; /* Adjust size as needed */
+    max-width: 500px;
+    align-items: center;
     height: auto;
+    left: 30px;
+    border-radius: 8px;
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
     position: absolute;
-    margin-left: 0px;
+    bottom: -20px;
+    z-index: 1; /* Spices image behind */
 }
 
 
@@ -448,7 +525,7 @@ h1, h2, h3 {
     }
 
     .welcome-text h1 {
-        font-size: 2.8em;
+        font-size: 2.0em;
     }
 
     .welcome-images {
@@ -456,12 +533,12 @@ h1, h2, h3 {
         min-width: unset;
     }
 
-    .pasta-image {
+    /* .pasta-image {
         width: 55%;
-    }
+    } */
 
     .spices-image {
-        width: 65%;
+        width: 85%;
     }
 
     .testimonial-card {
@@ -475,7 +552,7 @@ h1, h2, h3 {
     }
 
     .welcome-content {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 
@@ -483,6 +560,7 @@ h1, h2, h3 {
         min-width: unset;
         max-width: 100%;
         margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .welcome-text h1 {
@@ -503,7 +581,7 @@ h1, h2, h3 {
     }
 
     .spices-image {
-        width: 60%;
+        width: 75%;
     }
 
     .testimonials-header h2 {
